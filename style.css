@@ -1,29 +1,79 @@
-
-.titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
-
+body > * {
+	width: 800px;
+	margin: 0 auto;
+	font-family: 'Rubik', sans-serif;
 }
 
-.btn {
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: blue;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.5em;
+#jogo {
+	display: none;
+}
+
+#iniciar-jogo {
+	margin: 40px 0;
+}
+
+.inicio-jogo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#forca {
+	cursor: pointer;
+	border: 1px solid;
+}
+
+button {
+	border: 0;
+	color: white;
+	font-weight: bold;
+	background-color: #0000ff;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 0.5em;
+}
+
+button:disabled {
+	background-color: rgba(0, 0, 255, 0.3);
+}
+
+#palavra {
+	font-size: 3rem;
+	height: 70%;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .text-input {
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
+	border-radius: 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	display: block;
+	padding: 0.5em;
+	width: 30%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.letra {
+	text-align: center;
+	display: block;
+	height: 4rem;
+	width: 3rem;
+	margin-right: 0.8rem;
+	border-bottom: 4px #0d0d0e solid;
+}
+
+#letraJogador {
+	border-radius: 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	display: block;
+	padding: 0.5em;
+	width: 5%;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }

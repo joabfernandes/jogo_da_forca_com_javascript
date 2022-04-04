@@ -1,25 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jogo da Forca</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div style="text-align:center; margin: 50px 0px;">
-      <h1 class="titulo">Jogo da Forca</h1>
-      <button class="btn" id="iniciar-jogo">INICIAR JOGO</button>
-    </div>
-    <div style="text-align:center">
-      <input class="text-input" type="text" id="input-nova-palavra" placeholder="Escreva uma nova palavra">
-      <button class="btn" id="nova-palavra">ADICIONAR PALAVRA</button> 
-    </div>
-    <div style="text-align:center;">
-      <canvas id="forca" height="800px" width="1200px"></canvas>
-    </div>
-    <script type="text/javascript" src="canvas.js"></script>
-    <script type="text/javascript" src="forca.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Jogo da Forca</title>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	</head>
+	<body>
+		<div class="inicio-jogo">
+			<h1 class="titulo">Jogo da Forca</h1>
+			<input
+				class="text-input"
+				type="text"
+				id="input-nova-palavra"
+				placeholder="Adicione uma palavra para começar"
+			/>
+			<button onclick="adicionarPalavra()" id="nova-palavra" disabled >
+				ADICIONAR PALAVRA
+			</button>
+			<button onclick="iniciarJogo()" id="iniciar-jogo" disabled>
+				INICIAR JOGO
+			</button>
+		</div>
+
+		<section id="jogo">
+			<div style="text-align: center">
+				<div><input type="text" id="letraJogador" maxlength="1" /></div>
+				<button onclick="checarLetra()" id="nova-letra">
+					ADICIONAR LETRA
+				</button>
+			</div>
+			<ul id="palavra"></ul>
+			<div id="incorrect" class="incorrect">
+				<h2>Letras erradas :</h2>
+				<p id="letrasErradas"></p>
+			</div>
+		</div>
+	
+		<div style="text-align: center">
+			<canvas
+				id="forca"
+				width="700"
+				height="300"
+				style="border: 1px solid #000000"
+				tabindex="1"
+			></canvas>
+		</div>
+	</section>
+
+		<script type="text/javascript" src="forca.js"></script>
+		<script type="text/javascript" src="canvas.js"></script>
+	</body>
 </html>
